@@ -1,0 +1,7 @@
+animal = input("Name an animal: ")
+place = input("Name a place: ")
+verb = input("Name a verb: ")
+print("The", animal)
+print(" came from the", place)
+print(" and went ", verb)
+print(" with the frog.")
