@@ -15,7 +15,7 @@ int main()
    printf("Tell me the hour in military time:\n");
    scanf("%d", &hour);
    if(hour < 12){
-    printf("Good Morning!\n");
+    printf("Good Morning! Early bird gets the worm :)\n");
    }else if (hour < 18){
     printf("Good Afternoon!\n");
    }else{
