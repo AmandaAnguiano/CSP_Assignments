@@ -1,39 +1,21 @@
-print("Hello! This is a financial caculator!")
-income = float(input("how much do you make a month?:\n"))
-rent = float(input("how much doess your rent cost?:\n"))
-utilities = float(input("what does your utilities cost?:\n"))
-groceries = float(input("how much does your groceries cost?:\n"))
-transportation = float(input("how much does your trasportation cost:\n"))
-print("you make", income)
-savings = income*0.2
-expenses= rent + utilities + groceries + transportation
-spending = income-expenses-savings
-
-def input_value(type, amount):
-    var = type
-
-    return f"what is your monthly {type}?", amount
-
-print("your income is", income)
-print("your rent is", rent)
-print("your utilities is", utilities)
-print("your groceries is", groceries)
-print("your transportation is", transportation)
+print("This is a finacial calculator!")
+income = input("how much do you make a month?: ")
+rent = input("how much is your rent?: ")
+utilitties=input("How much is your utilitties?: ")
+groceries=input("How much do your groceries cost?: ")
+transp=input("What does your transportation cost?: ")
+print("You make", income)
+savings = float(income)*float(0.2)
+expenses = (float(rent) + float(utilitties) + float(groceries) + float(transp))
+spending = float(income)-float(expenses)-float(savings)
+print("your expenses are", expenses)
 print("your savings is", savings)
-print("your expenses is", expenses)
-print("your spending is", spending)
-def percent(type, amount):
-    per = amount/income *100
-
-    return(f"your {type} is {per}% income.")
-
-print(f"your monthly income are ${income:.2f}\n")
-print(f"your monthly expenses is ${expenses:.2f}\n")
-print(f"your monthly saving are ${savings:.2f}\n")
-print(f"your monthly spending are ${spending:.2f}\n")
-print(percent ("rent", rent))
-print(percent ("utilities", utilities))
-print(percent ("groceries", groceries))
-print(percent ("transportation", transportation))
-print(percent ("spending", spending))
-print(percent ("expenses", expenses))
+print("your spending money is", spending)
+prent=(float(rent)/float(income))*100
+putilitties=(float(utilitties)/float(income))*100
+pgroceries=(float(groceries)/float(income))*100
+ptransp=(float(transp)/float(income))*100
+print("your rent takes up this percent of your income;", prent)
+print("your utilitties take up this percent of your income;", putilitties)
+print("your groceries take up this percent of your income;", pgroceries)
+print("you transportation takes up this percent of your income;", ptransp)
