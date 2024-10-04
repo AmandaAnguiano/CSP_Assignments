@@ -10,8 +10,8 @@ int main()
 
    time(NULL);
    now_tm = localtime (&now);
-   hour +
-   printf("Current local time and date: %s", asctime(timeinfo));
+   hour = (now_tm->tm_hour);
+   printf("The hour in military time is: %d\n", hour);
    printf("Tell me the hour in military time:\n");
    scanf("%d", &hour);
    if(hour < 12){
