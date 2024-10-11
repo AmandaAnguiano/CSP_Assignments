@@ -1,10 +1,16 @@
 print("This is a finacial calculator!")
-income = input("how much do you make a month?: ")
-rent = input("how much is your rent?: ")
-utilitties=input("How much is your utilitties?: ")
-groceries=input("How much do your groceries cost?: ")
-transp=input("What does your transportation cost?: ")
+
+def answer(userinput):
+    question = float(input(f"how much is your {userinput}?"))
+    return question
+
+
+income = answer("income")
+
+
 print("You make", income)
+
+
 savings = float(income)*float(0.2)
 expenses = (float(rent) + float(utilitties) + float(groceries) + float(transp))
 spending = float(income)-float(expenses)-float(savings)
