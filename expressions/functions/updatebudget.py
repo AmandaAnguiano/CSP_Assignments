@@ -1,27 +1,28 @@
-print("This is a finacial calculator!")
+print("Hello, and welcome to your financial calculator!\n")
 
-def answer(userinput):
-    question = float(input(f"how much is your {userinput}?"))
+def answer(inputs):
+    question = float(input(f"What is your monthly {inputs}?\n"))
+   
     return question
 
+income= answer("income")
+rent = answer("rent")
+utilities = answer("utilities")
+groceries = answer("groceries")
+transportation = answer("transportation")
+saving = income*2
+expenses = rent+ utilities + groceries + transportation
+spend = income - expenses - saving
 
-income = answer("income")
+def percent(type, amount):
+    per = amount/income *100
 
+    return(f"Your {type} is  {per}% income")
 
-print("You make", income)
-
-
-savings = float(income)*float(0.2)
-expenses = (float(rent) + float(utilitties) + float(groceries) + float(transp))
-spending = float(income)-float(expenses)-float(savings)
-print("your expenses are", expenses)
-print("your savings is", savings)
-print("your spending money is", spending)
-prent=(float(rent)/float(income))*100
-putilitties=(float(utilitties)/float(income))*100
-pgroceries=(float(groceries)/float(income))*100
-ptransp=(float(transp)/float(income))*100
-print("your rent takes up this percent of your income;", prent)
-print("your utilitties take up this percent of your income;", putilitties)
-print("your groceries take up this percent of your income;", pgroceries)
-print("you transportation takes up this percent of your income;", ptransp)
+print(f"Your monthly income is ${income:.2f}\n")
+print(f"Your monthly expenses are ${expenses:.2f}\n")
+print(f"Your monthly savings is ${saving:.2f}\n")
+print(f"Your monthly spending money is ${spend:.2f}\n")
+print(percent("rent",rent))
+print(percent("utilities", utilities))
+print(percent("groceries", groceries))
